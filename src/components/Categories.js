@@ -1,10 +1,16 @@
 import React from 'react';
-import Button from './Button';
 
-function Categories() {
+import { useSelector } from 'react-redux';
+
+const Categories = () => {
+  const category = useSelector((state) => state.categories);
+
   return (
-    <Button name="Check status" />
+    <div>
+      <h2>Categories</h2>
+      <p>{category}</p>
+    </div>
   );
-}
+};
 
 export default Categories;
