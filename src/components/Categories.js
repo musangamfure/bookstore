@@ -1,16 +1,13 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
-
-const Categories = () => {
-  const category = useSelector((state) => state.categories);
-
+function Categories() {
   return (
-    <div>
-      <h2>Categories</h2>
-      <p>{category}</p>
-    </div>
+    <>
+      <div className="home">
+        <h2>Categories</h2>
+      </div>
+    </>
   );
-};
+}
 
 export default Categories;

@@ -1,18 +1,22 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Books from './components/Books';
-import Categories from './components/Categories';
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import NavBar from './components/navbar';
+import Home from './components/home';
+import Categories from './components/categories';
+import { store } from './redux/store';
 
 function App() {
   return (
-    <div className="container">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </div>
+    </Provider>
   );
 }
 
