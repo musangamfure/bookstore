@@ -2,11 +2,17 @@ import React from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook, removebook } from '../redux/books/booksSlice';
 import 'react-circular-progressbar/dist/styles.css';
 
-function Books({ id, title, author }) {
+function Books({
+  id, title, author,
+}) {
   const dispatch = useDispatch();
+  const handleDelete = async () => {
+    dispatch(removebook({ id }));
+    await dispatch(deleteBook({ id }));
+  };
   return (
     <>
       <div className="books-container">
@@ -16,12 +22,7 @@ function Books({ id, title, author }) {
             <p>{author}</p>
             <div className="book-button-section">
               <button type="button">Comments</button>
-              <button
-                onClick={() => dispatch(removeBook({ id }))}
-                type="button"
-              >
-                Remove
-              </button>
+              <button onClick={handleDelete} type="button">Remove</button>
               <button type="button">Edit</button>
             </div>
           </div>
@@ -30,7 +31,10 @@ function Books({ id, title, author }) {
               <CircularProgressbar value="75" text="75%" />
             </div>
             <div>
-              <h2>75 %</h2>
+              <h2>
+                75
+                %
+              </h2>
               <p>Completed</p>
             </div>
           </div>
