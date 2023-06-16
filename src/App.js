@@ -1,9 +1,9 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import NavBar from './components/navbar';
-import Home from './components/home';
-import Categories from './components/categories';
+import NavBar from './components/NavBar';
+import Home from './components/homePage';
+import Categories from './components/Categories';
 import { store } from './redux/store';
 
 function App() {
