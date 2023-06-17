@@ -13,7 +13,12 @@ function BooksList() {
   return (
     <>
       {BookList.map((book) => (
-        <Books key={book.item_id} id={book.item_id} title={book.title} author={book.author} />
+        <Books
+          key={book.item_id}
+          id={book.item_id}
+          title={book.title}
+          author={book.author}
+        />
       ))}
     </>
   );

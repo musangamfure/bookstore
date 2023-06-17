@@ -21,16 +21,29 @@ function AddBook() {
   };
   return (
     <>
+      <div className="div__line" />
       <div className="AddBook">
-        <h2>Add Book</h2>
-        <form id="addbookform">
-          <input type="text" placeholder="Book Name" value={title} onChange={(e) => setTitle(e.target.value)} required />
-          <br />
-          <br />
-          <input type="text" placeholder="Author Name" value={author} onChange={(e) => setAuthor(e.target.value)} required />
-          <br />
-          <br />
-          <button type="submit" onClick={handleSubmit}>Add Book</button>
+        <h2>ADD NEW BOOK</h2>
+        <form id="addbook__form">
+          <input
+            className="input__fields"
+            type="text"
+            placeholder="Book Name"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+          <input
+            className="input__fields"
+            type="text"
+            placeholder="Author Name"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+            required
+          />
+          <button className="add__btn" type="submit" onClick={handleSubmit}>
+            Add Book
+          </button>
         </form>
       </div>
     </>
