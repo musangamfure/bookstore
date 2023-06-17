@@ -149,7 +149,7 @@
   background-color: unset;
   padding: 4px 20px;
   color: #81aed5;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 .btn-no-left {
@@ -173,7 +173,6 @@
 
 .book__btn__section button:hover {
   color: #0290ff;
-  transform: scale(10px);
 }
 
 .section__two {
