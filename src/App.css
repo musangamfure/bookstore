@@ -34,8 +34,11 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  background-color: #fff;
+  border-bottom: 2px solid #adaaaa;
+  padding-left: 10px;
 }
 
 .navbar h1 {
@@ -47,6 +50,8 @@
   border: 1px solid #888;
   padding: 5px;
   border-radius: 100%;
+  display: flex;
+  margin-left: 300px;
 }
 
 .nav__menu {
@@ -67,22 +72,26 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 70%;
 }
 
 .nav__menu li {
+  text-transform: uppercase;
+  color: #848080;
   text-decoration: none;
   margin-left: 20px;
-  color: #000;
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.nav__menu li a {
+  color: #888;
 }
 
 .nav__menu li:hover {
   text-decoration: underline;
   color: #000;
-  font-size: 24px;
 }
 
 .books__container {
@@ -239,6 +248,7 @@
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .add__btn:hover {
