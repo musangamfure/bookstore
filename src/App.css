@@ -39,6 +39,7 @@
   background-color: #fff;
   border-bottom: 2px solid #adaaaa;
   padding-left: 10px;
+  position: relative;
 }
 
 .navbar h1 {
@@ -46,18 +47,19 @@
 }
 
 .user__profile__icon {
+  position: absolute;
   color: #0290ff;
   border: 1px solid #888;
   padding: 5px;
   border-radius: 100%;
   display: flex;
-  margin-left: 300px;
+  right: 2%;
 }
 
 .nav__menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -72,7 +74,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 70%;
 }
@@ -233,11 +235,12 @@
   color: #888;
 }
 
-.addbook__form {
+#addbook__form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .add__btn {
@@ -248,7 +251,6 @@
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .add__btn:hover {
