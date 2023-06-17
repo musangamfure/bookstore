@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 import { deleteBook, removebook } from '../redux/books/booksSlice';
 import 'react-circular-progressbar/dist/styles.css';
 
-function Books({
-  id, title, author,
-}) {
+function Books({ id, title, author }) {
   const dispatch = useDispatch();
   const handleDelete = async () => {
     dispatch(removebook({ id }));
@@ -15,30 +13,29 @@ function Books({
   };
   return (
     <>
-      <div className="books-container">
-        <div className="book-item">
-          <div className="section1">
+      <div className="books__container">
+        <div className="book__item">
+          <div className="section__one">
             <h2>{title}</h2>
             <p>{author}</p>
-            <div className="book-button-section">
+            <div className="book__btn__section">
               <button type="button">Comments</button>
-              <button onClick={handleDelete} type="button">Remove</button>
+              <button onClick={handleDelete} type="button">
+                Remove
+              </button>
               <button type="button">Edit</button>
             </div>
           </div>
-          <div className="section2">
-            <div className="progress-bar">
-              <CircularProgressbar value="75" text="75%" />
+          <div className="section__two">
+            <div className="progress__bar">
+              <CircularProgressbar value="65" text="65%" />
             </div>
-            <div>
-              <h2>
-                75
-                %
-              </h2>
+            <div className="progres__text">
+              <h2>65 %</h2>
               <p>Completed</p>
             </div>
           </div>
-          <div className="section3">
+          <div className="section__three">
             <p>CURRENT CHAPTER</p>
             <h3>Chapter 17</h3>
             <button type="button">Update Progress</button>
